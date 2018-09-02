@@ -36,6 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let color = event.target
     console.log(`this is color: ${event.target.classList}`)
 
+    let icon = document.querySelector('h1')
+    // use icon in top left as "current color indicator"
+    console.log(`icon: ${icon.classList}`);
+    if (icon.classList.contains('h1')) {
+      console.log(icon.classList);
+      icon.classList.toggle(color.classList)
+    }
+
     let pixelBoard = document.getElementById('pixel-board')
 
     pixelBoard.addEventListener('click', function(e) {
@@ -45,19 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
       if (pixel.classList.contains('pixelOff')) {
-        pixel.classList.replace('pixelOff', color.classList)
-        pixel.style.backgroundColor = color.value
+        pixel.classList.toggle(color.classList)
       } else if (pixel.classList.contains(color.classList)) {
-        pixel.classList.replace(color.classList, 'pixelOff')
+        pixel.classList.toggle('pixelOff')
         pixel.style.backgroundColor = 'pixelOff'
+      }
+
+      if (pixel.classList.length > 2) {
+        // console.log(pixel.classList.length)
+        // console.log(pixel.classList[1])
+        pixel.classList.remove(pixel.classList[1])
       }
 
 
 
 
-      let icon = document.querySelector('.fas')
-      // use icon in top left as "current color indicator"
-      icon.classList.replace('h1', color.classList)
+
 
     })
   })

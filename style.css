@@ -8,26 +8,24 @@ body {
   display: flex;
 }
 
-.fas {
-  background-color: pink;
+h1 {
   color: darkgrey;
   border-radius: 25px;
   width: 70px;
   height: 70px;
   margin-top: 40px;
   font-size: 150%;
+  padding: 50px;
 }
 
-
+.h1 {
+  background-color: pink;
+}
 
 .pixel {
   border: 1px solid black;
   width: 30px;
   height: 30px;
-}
-
-.pixelOff {
-  background-color: white;
 }
 
 
@@ -40,7 +38,6 @@ body {
   margin-top: 30px;
   height: 80px;
   padding-top: 3px;
-  
 }
 
 #paint {
@@ -51,8 +48,6 @@ body {
   margin-top: 20px;
   margin: auto;
   float: left;
-  
-
 }
 
 #paint:active {

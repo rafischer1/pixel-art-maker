@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  // stay below here
+
   console.log("The Script is working . . . ⏰")
 
   // set the title
@@ -31,59 +33,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
   palletteBoard.addEventListener('click', function(event) {
 
-    // let td = document.querySelector('td')
     let color = event.target
     console.log(`this is target: ${event.target.classList}`)
 
     let pixelBoard = document.getElementById('pixel-board')
+    let icon = document.getElementById('icon')
 
     pixelBoard.addEventListener('click', function(e) {
       console.log(`this is target e: ${e.target}`)
 
       let pixel = e.target
-      if (pixel.classList.contains('pixelOff')) {
-        pixel.classList.replace('pixelOff', color.classList)
+      if (pixel.classList) {
+        pixel.classList.toggle(color.classList)
+      }
+      if (pixel.classList !== color.classList) {
+        pixel.classList.toggle('pixelOff')
+        console.log(pixel.classList);
       } else {
-        pixel.classList.replace(color.classList, 'pixelOff')
+        pixel.reset()
       }
 
-
+      // use icon in top left as "current color indicator"
+      // if (icon) {
+      //   icon.classList.replace(icon.style.backgroundColor, color.classList)
+      // }
     })
   })
-  // colorPallette.addEventListener('click'function(event) {
-  // 
-  //   if (event.target.tagName === "pixel") {
-  //     let color = document.querySelector('whatever the color is')
-  // 
-  //     pixel.style.background = color.style.background
-  //     pixel.style.cursor = 'pointer'
-  // 
-  //     if (we have a color selected) {
-  //       
-  //     }
-  // 
-  // 
-  //   }
-  // })
-
-
-  // Take a larger size view and add the event listener to the larger div and say if event target is the pallet div grab the background style and add it to the pixel board div replace function 
-  // 
-  // 
-  // 
-  // Overlay.style.width = window.innerWidth + ‘px’. You can concat strings!
-  // 
-  // let pixelStyle = event.target.attribute ? 
-  // pixelStyle.replace(color.style.background, pixel.style.background) ?
-
-  // function fillSquare () {
-  //     this.setAttribute("style", `background-color: ${color.value}`);
-  // }
-
-
-
-
-
 
 
   // stay above here

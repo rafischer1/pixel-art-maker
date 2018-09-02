@@ -9,7 +9,13 @@ body {
 }
 
 .fas {
-  color: pink;
+  background-color: pink;
+  color: darkgrey;
+  border-radius: 25px;
+  width: 70px;
+  height: 70px;
+  margin-top: 40px;
+  font-size: 120%;
 }
 
 .pixel {
@@ -19,38 +25,9 @@ body {
 }
 
 .pixelOff {
-/* default empty pixel*/
+  background-color: white;
 }
 
-.pixelOn {
-  background-color: rgb(0, 33, 252);   
-  /*set default to white
-  background-color: #ffffff;
-  */
-}
-
-/* .pallette-board {
-  border-left: 5px solid #276dbf;
-  border-right: 5px solid #cc2950;
-  border-top: 5px solid #2bb566;
-  border-bottom: 5px solid #9e27d6;
-  margin-top: 10px;
-  width: 100%;
-  height: 80px;
-  padding: 20px;
-  display: block;
-
-} */
-
-/* .currentColor {
-  width: 50px;
-  height: 50px;
-  border: 5px solid black;
-  border-radius: 15px;
-  float: right;
-  margin: 2px;
-  padding: 18px;
-} */
 
 #pallette-board {
   border-left: 2px solid #276dbf;
@@ -58,30 +35,64 @@ body {
   border-top: 2px solid #2bb566;
   border-bottom: 2px solid #9e27d6;
   display: inline-block;
-  margin-top: 20px;
-  height: 100px;
+  margin-top: 30px;
+  height: 80px;
+  padding-top: 3px;
+  
 }
 
 #paint {
-  border-left: 2px solid #276dbf;
-  border-right: 2px solid #cc2950;
-  border-top: 2px solid #2bb566;
-  border-bottom: 2px solid #9e27d6;
+  border-left: 2px solid darkgrey;
   border-radius: 35px;
   color: white;
-  padding: 15px;
+  padding: 18px;
+  margin-top: 20px;
   margin: auto;
+  float: left;
   
-  
+
 }
 
 #paint:active {
-  margin: 10px;
+  margin: 3px;
 }
 
 /* PaintBrush Pallette Below Here*/
-.blank {
-  background-color: white;
+.peach{
+  background-color: #ffa07d;
+}
+.forest{
+  background-color: #14322c;
+}
+.lavendar {
+  background-color: #a981dd;
+}
+.skyBlue {
+  background-color: #a4f4ff;
+}
+.grey {
+  background-color: #989898;
+}
+.darkgrey {
+  background-color: #494949;
+}
+.navy {
+  background-color: #0d172b;
+}
+.sunflower {
+  background-color: #c9cc2b;
+}
+.neonGreen {
+  background-color: #00ffba;
+}
+.neonPink {
+  background-color: #ff00b8;
+}
+.tan {
+  background-color: #949f68;
+}
+.lightBlue {
+  background-color: #21dbe0;
 }
 .red {
   background-color: #cc2950;
@@ -109,6 +120,9 @@ body {
 }
 .pink {
   background-color: #ff6cfe;
+}
+.blank {
+  background-color: white;
 }
 
 

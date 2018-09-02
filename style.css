@@ -9,7 +9,6 @@ body {
 }
 
 h1 {
-  color: darkgrey;
   border-radius: 25px;
   width: 70px;
   height: 70px;
@@ -22,12 +21,34 @@ h1 {
   background-color: pink;
 }
 
+#icon {
+  color: rgb(228, 228, 228);
+}
+ 
+#eraser {
+  display: block;
+  font-size: 40px;
+}
+
 .pixel {
   border: 1px solid black;
   width: 30px;
   height: 30px;
 }
 
+#pixel-board {
+  padding-top: 10px;
+}
+
+table {
+  float: left;
+}
+
+td {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
 
 #pallette-board {
   border-left: 2px solid #276dbf;
@@ -52,6 +73,10 @@ h1 {
 
 #paint:active {
   margin: 3px;
+}
+
+.music {
+  text-align: center;
 }
 
 
@@ -116,27 +141,16 @@ h1 {
 .teal {
   background-color: #2fad9e;
 }
+.royalBlue {
+  background-color: #0003ff;
+}
 .pink {
   background-color: #ff6cfe;
 }
+.maroon {
+  background-color: #401027;
+}
+
 .blank {
   background-color: white;
-}
-
-
-
-/**/
-
-#pixel-board {
-  padding-top: 10px;
-}
-
-table {
-  float: left;
-}
-
-td {
-  border: 1px solid black;
-  width: 20px;
-  height: 20px;
 }

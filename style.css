@@ -15,8 +15,10 @@ body {
   width: 70px;
   height: 70px;
   margin-top: 40px;
-  font-size: 120%;
+  font-size: 150%;
 }
+
+
 
 .pixel {
   border: 1px solid black;
@@ -56,6 +58,7 @@ body {
 #paint:active {
   margin: 3px;
 }
+
 
 /* PaintBrush Pallette Below Here*/
 .peach{

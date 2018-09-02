@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // create grid 
   function createGrid() {
 
-    let num = window.innerWidth;
+    let num = window.innerWidth / 1.5;
 
     for (var i = 0; i <= num; i++) {
       let board = document.getElementById('pixel-board')
@@ -34,29 +34,31 @@ document.addEventListener("DOMContentLoaded", function() {
   palletteBoard.addEventListener('click', function(event) {
 
     let color = event.target
-    console.log(`this is target: ${event.target.classList}`)
+    console.log(`this is color: ${event.target.classList}`)
 
     let pixelBoard = document.getElementById('pixel-board')
-    let icon = document.getElementById('icon')
 
     pixelBoard.addEventListener('click', function(e) {
-      console.log(`this is target e: ${e.target}`)
+      console.log(`this is target e: ${e.target.classList}`)
 
       let pixel = e.target
-      if (pixel.classList) {
-        pixel.classList.toggle(color.classList)
-      }
-      if (pixel.classList !== color.classList) {
-        pixel.classList.toggle('pixelOff')
-        console.log(pixel.classList);
-      } else {
-        pixel.reset()
+
+
+      if (pixel.classList.contains('pixelOff')) {
+        pixel.classList.replace('pixelOff', color.classList)
+        pixel.style.backgroundColor = color.value
+      } else if (pixel.classList.contains(color.classList)) {
+        pixel.classList.replace(color.classList, 'pixelOff')
+        pixel.style.backgroundColor = 'pixelOff'
       }
 
+
+
+
+      let icon = document.querySelector('.fas')
       // use icon in top left as "current color indicator"
-      // if (icon) {
-      //   icon.classList.replace(icon.style.backgroundColor, color.classList)
-      // }
+      icon.classList.replace('h1', color.classList)
+
     })
   })
 

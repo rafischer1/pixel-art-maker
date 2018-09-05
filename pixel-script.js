@@ -33,13 +33,17 @@ document.addEventListener("DOMContentLoaded", function() {
   palletteBoard.addEventListener('click', function(event) {
 
 
-    // if (event.target.className !== 'container') {
-    // 
-    // }
-
     let color = event.target
     let icon = document.querySelector('h1')
+    // let icon = document.getElementById('icon')
+    // the h1 element is having a bootstrap @media width class of container applied       see: inspect h1
+
+    console.log(`I am container: ${icon.className}`);
     icon.className = color.className
+    if (icon.className === "container") {
+      icon.className = "h1"
+    }
+
     console.log(`this is color: ${color.className}`)
 
 

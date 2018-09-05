@@ -32,13 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
   // pixel painting main function
   palletteBoard.addEventListener('click', function(event) {
 
-    let color = event.target
-    console.log(`this is color: ${color.className}`)
 
-    // use icon in top left as "current color indicator"
+    // if (event.target.className !== 'container') {
+    // 
+    // }
+
+    let color = event.target
     let icon = document.querySelector('h1')
     icon.className = color.className
+    console.log(`this is color: ${color.className}`)
 
+
+    // use icon in top left as "current color indicator"
     let pixelBoard = document.getElementById('pixel-board')
 
     pixelBoard.addEventListener('click', function(e) {
@@ -46,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       let pixel = e.target
 
-      if (color.className) {
+      if (color.className !== 'container') {
         pixel.className = color.className
       }
       // not toggling...
